@@ -1,8 +1,10 @@
 class CatalogScreen {
   get productsHeader() {
-    return $(
-      '//XCUIElementTypeStaticText[@name="Products"]'
-    );
+    if(driver.isAndroid) {
+      return $("~container header").$('android=className("android.widget.TextView")');
+    } else {
+      return $('~Products');
+    }
   }
 }
 

@@ -1,22 +1,29 @@
 class LoginScreen {
   get inputUsername() {
-    return $('-ios class chain:**/XCUIElementTypeTextField[`name == "Username input field"`]');
+    return $('~Username input field');
   }
 
   get inputPassword() {
-    return $('-ios predicate string:name == "Password input field"');
+    return $('~Password input field');
   }
 
   get btnLogin() {
     return $(
-      '//*[@name="Login button"]'
+      '~Login button'
     );
   }
 
   get errorMessageText() {
-    return $(
-      '//*[@name="generic-error-message"]'
-    );
+    if(driver.isAndroid) {
+      return $(
+        '~generic-error-message'
+      ).$('android=className("android.widget.TextView")');
+    } else {
+      return $(
+        '~generic-error-message'
+      );
+    }
+
   }
 
   /**
