@@ -32,12 +32,7 @@ class LoginScreen {
    */
   async login(username, password) {
     await this.inputUsername.clearValue();
-
-    // User type the username
-    await username.split('').map(async (char, i) => {
-      await browser.pause(i * 100)
-      await this.inputUsername.addValue(char)
-    });
+    await this.inputUsername.setValue(username);
 
     // User type the pass
     await this.inputPassword.setValue(password);
