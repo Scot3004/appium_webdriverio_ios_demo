@@ -4,7 +4,7 @@ const LeftSideMenuScreen = require("../../screenObjects/ios/BottomSideMenu.scree
 const MainMenuScreen = require("../../screenObjects/ios/MainMenu.screen")
 
 describe("My Login Demo", () => {
-  beforeEach(async () => {
+  before(async () => {
     await LeftSideMenuScreen.expandMenuButton.click();
     await MainMenuScreen.loginMenuOption.click();
   });
