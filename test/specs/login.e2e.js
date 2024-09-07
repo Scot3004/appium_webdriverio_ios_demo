@@ -1,7 +1,7 @@
-const CatalogScreen = require("../../screenObjects/ios/Catalog.screen");
-const LoginScreen = require("../../screenObjects/ios/Login.screen");
-const LeftSideMenuScreen = require("../../screenObjects/ios/BottomSideMenu.screen")
-const MainMenuScreen = require("../../screenObjects/ios/MainMenu.screen")
+const CatalogScreen = require("../screenObjects/ios/Catalog.screen");
+const LoginScreen = require("../screenObjects/ios/Login.screen");
+const LeftSideMenuScreen = require("../screenObjects/ios/BottomSideMenu.screen")
+const MainMenuScreen = require("../screenObjects/ios/MainMenu.screen")
 
 describe("My Login Demo", () => {
   before(async () => {

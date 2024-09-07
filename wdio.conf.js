@@ -13,7 +13,7 @@ config.port = 4723;
 // Specs
 // ============
 config.specs = [
-  path.join(process.cwd(), './test/specs/ios/*.e2e.js')
+  path.join(process.cwd(), './test/specs/*.e2e.js')
 ];
 
 //
