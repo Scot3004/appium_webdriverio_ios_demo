@@ -1,8 +1,12 @@
 class MainMenuScreen {
-    get loginMenuOption() {
-      return $('//XCUIElementTypeOther[@name="menu item log in"]');
-    }
+  get loginMenuOption() {
+    return $('~menu item log in');
   }
+
+  get drawMenuOption() {
+    return $('~menu item drawing');
+  }
+}
   
-  module.exports = new MainMenuScreen();
+module.exports = new MainMenuScreen();
   

@@ -1,6 +1,10 @@
 class BottomSideMenuScreen {
   get expandMenuButton() {
-    return $("~tab bar option menu");
+    if(driver.isAndroid) {
+      return $("~open menu");
+    } else {
+      return $("~tab bar option menu");
+    }
   }
 }
 
