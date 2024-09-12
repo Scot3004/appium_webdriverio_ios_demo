@@ -1,6 +1,6 @@
 const path = require('path');
-const { config } = require('./wdio.shared.conf');
-const iosAppPath = path.join(process.cwd(), "app/ios/MyRNDemoApp.app");
+const { config } = require('../wdio.shared.conf');
+const androidAppPath = path.join(process.cwd(), "app/android/rn-demo.apk");
 
 // ====================
 // Runner Configuration
@@ -22,10 +22,10 @@ config.specs = [
 // ============
 config.capabilities = [
   {
-    platformName: "iOS",
-    'appium:deviceName': 'iPhone 14',
-    'appium:automationName': 'XCUITest',
-    "appium:app": iosAppPath,
+    platformName: "Android",
+    'appium:deviceName': 'emulator-5554',
+    'appium:automationName': 'uiautomator2',
+    "appium:app": androidAppPath,
   }
 ]
 
